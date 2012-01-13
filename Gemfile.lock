@@ -13,7 +13,7 @@ PATH
       database_cleaner
       devise
       diff-lcs
-      facets (= 2.8.4)
+      facets (= 2.9.2)
       haml
       httparty
       json_pure (> 1.4.3)
@@ -135,7 +135,7 @@ GEM
       nokogiri (>= 1.4.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    facets (2.8.4)
+    facets (2.9.2)
     factory_girl (2.3.2)
       activesupport
     fastercsv (1.5.4)
