@@ -63,12 +63,18 @@ module Hydra
         active_fedora_model_s = solr_doc["active_fedora_model_s"] if solr_doc["active_fedora_model_s"]
         actual_class = active_fedora_model_s.constantize if active_fedora_model_s
         if actual_class && actual_class != self.class && actual_class.superclass == ::FileAsset
+          ensure_system_create(solr_doc, opts)
           solr_doc
         else
           super(solr_doc,opts)
         end
       end
 
+    end
+    def ensure_system_create(solr_doc, opts)
+      unless opts[:model_only]
+        solr_doc.merge!(ActiveFedora::SolrService.solr_name(:system_create, :date) => self.create_date, ActiveFedora::SolrService.solr_name(:system_modified, :date) => self.modified_date)
+      end
     end
   end
 end
