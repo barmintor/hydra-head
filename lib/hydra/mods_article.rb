@@ -2,7 +2,7 @@
 module Hydra
   
   class ModsArticle < ActiveFedora::NokogiriDatastream       
-    include Hydra::Datastream::CommonModsIndexMethods
+    include Hydra::CommonModsIndexMethods
 
     def initialize(digital_object, dsid, options={})
       ActiveSupport::Deprecation.warn("Hydra::ModsArticle has been deprecated. Use Hydra::Datastream::ModsArticle instead")
