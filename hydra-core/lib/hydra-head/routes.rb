@@ -35,6 +35,7 @@ module HydraHead
             resources :assets do 
               resources :file_assets
             end
+            resources :datastreams
           end
         end
       end

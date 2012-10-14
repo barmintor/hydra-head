@@ -15,6 +15,7 @@ module Hydra::Controller
   autoload :RepositoryControllerBehavior, 'hydra/controller/repository_controller_behavior'
   autoload :UploadBehavior, 'hydra/controller/upload_behavior'
   autoload :FileAssetsBehavior, 'hydra/controller/file_assets_behavior'
+  autoload :DatastreamsBehavior, 'hydra/controller/datastreams_behavior'
 
   extend ActiveSupport::Concern
   
